@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Toggle Example</title>
+</head>
+<body>
+
+  <h1 id="heading">The most affordable learning platform</h1>
+  <button onclick="toggleHeading()">Enter</button>
+
+  <script>
+    function toggleHeading() {
+      var headingElement = document.getElementById('heading');
+
+      if (headingElement.innerHTML === 'The most affordable learning platform') {
+        headingElement.innerHTML = 'PW Skills';
+      } else {
+        headingElement.innerHTML = 'The most affordable learning platform';
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Mix</title>
+    <script type="text/javascript">
+
+    function mixColors(color1, color2) {
+    // Convert the color strings to lowercase for case-insensitivity
+    color1 = color1.toLowerCase();
+    color2 = color2.toLowerCase();
+
+    switch (color1 + "-" + color2) {
+        case "red-blue":
+        case "blue-red":
+            return "purple";
+        case "red-yellow":
+        case "yellow-red":
+            return "orange";
+        case "blue-yellow":
+        case "yellow-blue":
+            return "green";
+        default:
+            return "Invalid combination";
+    }
+}
+
+var color1 = prompt("Enter the first color:");
+var color2 = prompt("Enter the second color:");
+
+var result = mixColors(color1, color2);
+console.log(`Resulting color: ${result}`);
+
+</script>
+</head>
+<body>
+</body>
+</html>

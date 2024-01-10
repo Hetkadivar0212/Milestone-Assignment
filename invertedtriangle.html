@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverted Triangle</title>
+    <script>
+        function printInvertedTriangle(i) {
+    for (let row = i; row >= 1; row--) {
+        let pattern = '';
+        for (let col = 1; col <= row; col++) {
+            pattern += '*';
+        }
+        console.log(pattern);
+    }
+}
+
+// Example usage with i=6
+var i = 6;
+printInvertedTriangle(i);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

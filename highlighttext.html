@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highlight Words</title>
+  <style>
+    .highlighted {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="paragraph">
+    This is a sample paragraph with words of varying lengths. Some words are longer than 8 characters
+    and should be highlighted with a yellow background. The highlighting is done using JavaScript and the DOM.
+  </p>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the paragraph element
+      const paragraph = document.getElementById('paragraph');
+
+      // Split the paragraph into an array of words
+      const words = paragraph.textContent.split(/\s+/);
+
+      // Iterate through the words and highlight those greater than 8 characters
+      words.forEach(function (word) {
+        if (word.length > 8) {
+          // Create a span element for each highlighted word
+          const span = document.createElement('span');
+          span.textContent = word;
+          span.classList.add('highlighted');
+
+          // Replace the original word with the span element
+          paragraph.innerHTML = paragraph.innerHTML.replace(word, span.outerHTML);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

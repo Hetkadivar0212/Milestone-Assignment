@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalize</title>
+    <script>
+        function capitalizeFirstName(name) {
+    // Check if the first letter is lowercase using the ternary operator
+    var modifiedName = name.charAt(0).toLowerCase() === name.charAt(0)
+        ? name.charAt(0).toUpperCase() + name.slice(1)
+        : name;
+
+    return modifiedName;
+}
+
+// Example usage
+var userName = prompt("Enter your name:");
+var result = capitalizeFirstName(userName);
+console.log(`Modified Name: ${result}`);
+
+    </script>
+</head>
+<body>
+</body>
+</html>

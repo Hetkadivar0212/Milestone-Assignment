@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    .error-message {
+      color: red;
+    }
+
+    .success-message {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="loginForm">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required>
+
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <br>
+
+    <button type="button" onclick="validateForm()">Submit</button>
+  </form>
+
+  <p id="message" class="error-message"></p>
+
+  <script>
+    function validateForm() {
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var messageElement = document.getElementById('message');
+
+      if (email.includes('@') && password.length >= 8) {
+        // Valid input
+        messageElement.textContent = 'Valid email and password!';
+        messageElement.className = 'success-message';
+      } else {
+        // Invalid input
+        messageElement.textContent = 'Invalid email or password!';
+        messageElement.className = 'error-message';
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Duplicate</title>
+    <script>
+        // Function to remove duplicate items from the cart
+function removeDuplicates(cartWithDuplicates) {
+    
+    var uniqueItems = {};
+
+    cartWithDuplicates.forEach(item => {
+        uniqueItems[item.id] = uniqueItems[item.id] || item;
+    });
+
+    // Convert the object back to an array (new cart without duplicates)
+    var cartWithoutDuplicates = Object.values(uniqueItems);
+
+    return cartWithoutDuplicates;
+}
+
+// Example
+var cartWithDuplicates = [
+    { id: 1, name: "Product A", quantity: 2 },
+    { id: 2, name: "Product B", quantity: 1 },
+    { id: 1, name: "Product A", quantity: 1 }, // Duplicate of Product A
+    { id: 3, name: "Product C", quantity: 3 },
+    { id: 2, name: "Product B", quantity: 2 }  // Duplicate of Product B
+];
+
+var cartWithoutDuplicates = removeDuplicates(cartWithDuplicates);
+
+// Display the new cart
+console.log("Original Cart:", cartWithDuplicates);
+console.log("Cart Without Duplicates:", cartWithoutDuplicates);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

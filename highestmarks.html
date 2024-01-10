@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highest Marks</title>
+    <script>
+        // Sample array of marks
+var marks = [85, 92, 78, 95, 89];
+
+// Using the ternary operator to find the highest marks
+var highestMarks = marks.reduce((max, current) => (current > max ? current : max), marks[0]);
+
+// Displaying the highest marks to the teacher
+console.log(`The highest marks scored by a student in the class: ${highestMarks}`);
+
+    </script>
+</head>
+<body> 
+</body>
+</html>
